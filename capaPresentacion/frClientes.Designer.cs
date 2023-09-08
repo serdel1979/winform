@@ -40,6 +40,7 @@
             btnNuevo = new Button();
             btnEliminar = new Button();
             btnGuardar = new Button();
+            label4 = new Label();
             ((System.ComponentModel.ISupportInitialize)picFoto).BeginInit();
             SuspendLayout();
             // 
@@ -73,12 +74,13 @@
             // linkLabel1
             // 
             linkLabel1.AutoSize = true;
-            linkLabel1.Location = new Point(59, 232);
+            linkLabel1.Location = new Point(63, 257);
             linkLabel1.Name = "linkLabel1";
-            linkLabel1.Size = new Size(50, 15);
+            linkLabel1.Size = new Size(67, 15);
             linkLabel1.TabIndex = 3;
             linkLabel1.TabStop = true;
-            linkLabel1.Text = "linkFoto";
+            linkLabel1.Text = "Seleccionar";
+            linkLabel1.LinkClicked += linkLabel1_LinkClicked;
             // 
             // txtId
             // 
@@ -107,6 +109,7 @@
             picFoto.Location = new Point(146, 228);
             picFoto.Name = "picFoto";
             picFoto.Size = new Size(166, 131);
+            picFoto.SizeMode = PictureBoxSizeMode.StretchImage;
             picFoto.TabIndex = 7;
             picFoto.TabStop = false;
             // 
@@ -122,6 +125,7 @@
             btnNuevo.TabIndex = 8;
             btnNuevo.Text = "Nuevo";
             btnNuevo.UseVisualStyleBackColor = true;
+            btnNuevo.Click += btnNuevo_Click;
             // 
             // btnEliminar
             // 
@@ -140,12 +144,23 @@
             btnGuardar.TabIndex = 10;
             btnGuardar.Text = "Guardar";
             btnGuardar.UseVisualStyleBackColor = true;
+            btnGuardar.Click += btnGuardar_Click;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(63, 228);
+            label4.Name = "label4";
+            label4.Size = new Size(31, 15);
+            label4.TabIndex = 11;
+            label4.Text = "Foto";
             // 
             // frClientes
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(700, 438);
+            Controls.Add(label4);
             Controls.Add(btnGuardar);
             Controls.Add(btnEliminar);
             Controls.Add(btnNuevo);
@@ -178,5 +193,6 @@
         private Button btnNuevo;
         private Button btnEliminar;
         private Button btnGuardar;
+        private Label label4;
     }
 }
